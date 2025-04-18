@@ -8,7 +8,7 @@ gem 'importmap-rails'          # JavaScript with ESM import maps
 gem 'turbo-rails'              # Hotwire's SPA-like page accelerator
 gem 'stimulus-rails'           # Hotwire's modest JavaScript framework
 gem 'jbuilder'                 # JSON APIs
-gem 'bcrypt', '~> 3.1.7'       # Password hashing
+gem 'bcrypt'       # Password hashing
 gem 'solid_cache'              # Database-backed cache adapter
 gem 'solid_queue'              # Database-backed job queue
 gem 'solid_cable'              # Database-backed action cable
@@ -17,11 +17,11 @@ gem 'kamal', require: false    # Docker deployment
 gem 'thruster', require: false # HTTP asset caching/compression
 gem 'pg'                       # PostgreSQL adapter
 gem 'activestorage'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing'
 gem 'mini_magick'
 
 # Admin panel
-gem 'avo', '>= 3.2.1'
+gem 'avo'
 
 # Email service
 gem 'postmark-rails'
@@ -30,7 +30,7 @@ gem 'postmark-rails'
 gem 'mission_control-jobs'
 
 # Pagination
-gem 'pagy', '~> 9.3'
+gem 'pagy'
 
 # Markdown support
 gem 'marksmith'
@@ -38,7 +38,7 @@ gem 'commonmarker'
 gem 'redcarpet'
 
 # CSS
-gem 'tailwindcss-rails', '~> 3.1'
+gem 'tailwindcss-rails'
 
 after_bundle do
   # Initialize git repo
@@ -89,7 +89,6 @@ after_bundle do
   generate 'mailer Passwords reset'
 
   # Set up Active Storage
-  rails_command 'active_storage:install'
 
   # Create concerns
   file 'app/models/concerns/nameable.rb', <<~RUBY
